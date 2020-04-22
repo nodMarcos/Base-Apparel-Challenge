@@ -22,28 +22,37 @@
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+      text-decoration: none;
     }
   </style>
 </head>
 
-<body>
-
-  <img class='full-image' src="./images/hero-desktop.jpg" alt="">
-  <img class="logo" src="./images/logo.svg">
-
+<body>  
+  <div class="container">
   <div class="content">
-
-
-    <h1>We're <span>coming <br>soon</span></h1>
-
-
+    
+    <div class="logo">
+      <img src="./images/logo.svg">
+    </div>
     <section>
-      <p>Hello fellow shoppers! We're currently building our new<br> fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+    
+      <h1>We're <span>coming <br>soon</span></h1>
 
-      <input id='email' placeholder='Email Address' type='email'><button type="submit" onclick="validateEmail()"><i
-          class="fas fa-chevron-right sm"></i></button>
+
+      <p>Hello fellow shoppers! We're currently building our new fashion store.
+         Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form action="">
+        <input placeholder="Email address" type="email" name="" id="input">
+        <input type="button" value=">">
+      </form>
+
     </section>
+    
+  </div>
+</div>
+
+  <div class="side">
+    <img class="side__img" src="./images/hero-desktop.jpg">
   </div>
   <footer>
     <p class="attribution">
@@ -51,17 +60,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
-  <script>
-    let email = $("#email").val()
-
-    function ValidateEmail(email) {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value)) {
-        return (true)
-      }
-      alert("You have entered an invalid email address!")
-      return (false)
-    }
-  </script>
 </body>
 
 </html>

@@ -1,86 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
-*{  
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0 ;
     box-sizing: border-box;
 }
-body{
-    font: 300 16px Josefin Sans, sans-serif;
-    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    color: hsl(0, 36%, 70%);
-}
-.full-image{
-    max-width: 100%;
-    height: 100%;
-    max-height: 660px;
-    display: block;
-    float: right;
-}
-.logo{
-    padding: 24px;
-    margin: 50px 75px;
 
+body{
+    font: 300 16px Josefin Sans;
+    max-width: 1250px;
+    background-image:url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat ;
+    background-size: contain;
+    color: hsl(0, 36%, 70%);
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.side{   
+    width: 40%;
+    height: 100vh;
+}
+.side_img{
+    width: 100%;
+}
+.container{
+    width: 60%;
+    height: 100vh;
 }
 .content{
-    padding: 24px;
-    display: flex;
-    max-width: 1250px;
-    margin-left: 75px;
-    flex-wrap: wrap;
+    width: 100%;    
 }
-.content h1{
-    text-transform: uppercase;
-    font-size: 50px;
-    letter-spacing: 20px;
-    font-weight: 300;
-}
-.content span{
-    display: block;
-    font-weight: 600;
-    color: black;
-}
-section{
-    margin-right: 50px;
-    font-size: 20px;
-}
-section p{
-    margin-top: 30px;
-    font-weight: 400;
-    line-height: 30px;
+.content .logo{
+    margin:100px;
 }
 
-section input{
-    width: 100%;
-    max-width: 500px;
-    height: 50px;
+.content section{
+    margin: 100px;    
+}
+.content section h1{
+    font-size:60px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 20px;
+}
+.content section span{
+    display: block;
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+.content section{
+    font-size: 16px;
+}
+.content section p{
+    margin-top: 20px;
+    line-height: 20px;
+    margin-right: 80px;
+}
+.content input{
     margin-top: 30px;
+    width: 80%;
+    padding: 16px;
     border: 1px solid hsl(0, 36%, 70%);
-    padding: 24px;
-    border-radius: 48px ;
-}
-section input::placeholder{
-    font-family: Josefin Sans;
-    font-weight: 400;
-    color: hsl(0, 36%, 70%);
-}
-section input:focus, button:focus{
     outline: none;
-    color: hsl(0, 36%, 70%);
+    border-radius: 40px;
 }
-section button[type="submit"]{
-    margin-left: -75px;
-    background-image: linear-gradient( 135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%)); 
-    border: 1px solid hsl(0, 36%, 70%);
-    border-radius: 48px;
-    cursor: pointer;
-    color: #fff;   
-    height: 50px;
-    width: 100%;
-    max-width: 90px;
+::placeholder{
+    color:hsl(0, 36%, 70%);
+    font-weight: 600;
+    font-family: Josefin Sans;
+}
+.content input[type="button"]{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    color: #fff;
+    width: 20%;
+    margin-left: -50px;
     transition: opacity 0.2s;
 }
-section button[type="submit"]:hover{
+.content input[type="button"]:hover{
+    cursor: pointer;
     opacity: 90%;
 }
+
+
+
+
+
 
