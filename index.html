@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <script src="https://kit.fontawesome.com/49812d7d5f.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
@@ -34,6 +33,7 @@
     <div class="logo">
       <img src="./images/logo.svg">
     </div>
+      <img class="mobile" src="./images/hero-mobile.jpg">
     <section>
     
       <h1>We're <span>coming <br>soon</span></h1>
@@ -42,9 +42,12 @@
       <p>Hello fellow shoppers! We're currently building our new fashion store.
          Add your email below to stay up-to-date with announcements and our launch deals.</p>
       <form action="">
-        <input placeholder="Email address" type="email" name="" id="input">
-        <input type="button" value=">">
+        <input id="email" placeholder="Email address" type="email">
+        <img id='err_icon'src="./images/icon-error.svg" class="err_icon" alt="" hidden>
+        <input type="button" onclick="validate()" value=">">
       </form>
+
+      <div id="msg"></div>
 
     </section>
     
@@ -60,6 +63,29 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script>
+    
+    
+    function validate(){
+      let email = document.getElementById("email").value
+      let icon = document.getElementById('err_icon')
+      let msg = document.getElementById('msg')
+
+      if(!emailIsValid(email)){
+        msg.innerHTML = 'Please provide a valid email!'
+        icon.hidden = false
+      }else{
+        msg.innerHTML = 'Thanks for subscribing!'
+        icon.hidden = true
+      }
+
+
+    }
+    
+    function emailIsValid (email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    }
+  </script>
 </body>
 
 </html>

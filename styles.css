@@ -14,7 +14,10 @@ body{
     color: hsl(0, 36%, 70%);
     display: flex;
     flex-wrap: wrap;
-} 
+}
+.mobile{
+    display: none;
+}
 
 .side{   
     width: 40%;
@@ -58,16 +61,27 @@ body{
 }
 .content input{
     margin-top: 30px;
-    width: 80%;
+    width: 70%;
     padding: 16px;
     border: 1px solid hsl(0, 36%, 70%);
-    outline: none;
     border-radius: 40px;
+}
+.content input:focus{
+    outline: none;
+    color: hsl(0, 36%, 70%);
 }
 ::placeholder{
     color:hsl(0, 36%, 70%);
     font-weight: 600;
     font-family: Josefin Sans;
+}
+.err_icon{
+    position: absolute;
+    width: 100%;
+    max-width: 20px;
+    margin-top: 45px;
+    margin-left:-75px;
+    
 }
 .content input[type="button"]{
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
@@ -76,11 +90,50 @@ body{
     margin-left: -50px;
     transition: opacity 0.2s;
 }
+
 .content input[type="button"]:hover{
     cursor: pointer;
     opacity: 90%;
 }
+.content #msg{
+    margin-top: 10px;
+}
 
+@media(max-width: 760px){
+    
+    .side__img{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .container{
+        width: 100%;
+
+    }
+    .content .logo{
+        margin: 30px;        
+    }
+    .content section h1{
+        font-size: 45px;
+        letter-spacing: 0px;
+    }
+    .content section p{
+        font-size: 14px;
+        margin: 0;
+    }
+    .content section input{
+        width: 100%;
+        
+    }
+   
+    .content section input[type="button"]{
+        max-width: 60px;
+        position: absolute;
+        width: 20%;
+    }
+    
+}
 
 
 
